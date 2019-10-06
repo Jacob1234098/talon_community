@@ -204,17 +204,17 @@ context.keymap(
         # "move tab left way": Key("ctrl-shift-down"),
         # vimium
         "link": link,
-        "move tab left": browser.send_to_vimium("<<"),
-        "move tab right": browser.send_to_vimium(">>"),
-        "move tab new window": browser.send_to_vimium("W"),
-        "tab (named | name | by name)": browser.send_to_vimium("T"),
-        "tab (named | name | by name) <dgndictation>": [
-            browser.send_to_vimium("T"),
-            lambda m: time.sleep(0.3),
-            lambda m: utils.paste_text(utils.string_capture(m)),
-            lambda m: time.sleep(0.0),
-            Key("enter"),
-        ],
+        # "move tab left": browser.send_to_vimium("<<"),
+        # "move tab right": browser.send_to_vimium(">>"),
+        # "move tab new window": browser.send_to_vimium("W"),
+        # "tab (named | name | by name)": browser.send_to_vimium("T"),
+        # "tab (named | name | by name) <dgndictation>": [
+        #     browser.send_to_vimium("T"),
+        #     lambda m: time.sleep(0.3),
+        #     lambda m: utils.paste_text(utils.string_capture(m)),
+        #     lambda m: time.sleep(0.0),
+        #     Key("enter"),
+        # ],
         "open most recently downloaded file": open_most_recently_downloaded_file,
     }
 )

@@ -9,7 +9,7 @@ from talon_init import TALON_HOME
 path = os.path.join(TALON_HOME, "last_phrase")
 WEBVIEW = True
 NOTIFY = False
-hist_len = 6
+hist_len = 3
 
 
 def parse_phrase(phrase):

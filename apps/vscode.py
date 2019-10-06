@@ -70,6 +70,7 @@ context.keymap(
         "Go to line": Key("cmd-g"),
         "line up" + optional_numerals: repeat_function(2, "alt-up"),
         "line down" + optional_numerals: repeat_function(2, "alt-down"),
+        'zin mode': Key('cmd-k z'),
         # Navigating Interface
         "explore tab": Key("shift-cmd-e"),
         "search tab": Key("shift-cmd-f"),
@@ -78,6 +79,7 @@ context.keymap(
         "extensions tab": Key("shift-cmd-x"),
         "go to file <dgndictation>": [Key("cmd-p"), text],
         "master": Key("cmd-p"),
+        "jumpy": Key('ctrl+-'),
         # tabbing
         "stiffy": Key("cmd-alt-left"),
         "next tab": Key("cmd-alt-right"),
@@ -91,7 +93,7 @@ context.keymap(
         # editing
         "bracken": [Key("cmd-shift-ctrl-right")],
         # various
-        "comment": Key("cmd-shift-7"),
+        "comment": Key("cmd-/"),
         "search all": Key("cmd-shift-f"),
         "(drop-down | drop)": Key("ctrl-space"),
     }

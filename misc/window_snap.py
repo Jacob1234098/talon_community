@@ -154,7 +154,7 @@ ctx.keymap(
         # Third-of-the-screen versions of top quarters
         "snap top left third": grid(1, 1, 3, 2),
         "snap top right third": grid(3, 1, 3, 2),
-        "snap top left two thirds": grid(1, 1, 3, 2, colspan=2),
+        "snap top left two thirSpectacleds": grid(1, 1, 3, 2, colspan=2),
         "snap top right two thirds": grid(2, 1, 3, 2, colspan=2),
         "snap top center third": grid(2, 1, 3, 2),
 

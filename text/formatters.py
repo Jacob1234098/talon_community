@@ -45,14 +45,14 @@ formatters = normalise_keys(
             lambda i, word, _: "$" + word if i == 0 else word.capitalize(),
         ),
         "champ": (True, lambda i, word, _: word.capitalize() if i == 0 else " " + word),
-        "lowcram": (
-            True,
-            lambda i, word, _: "@" + word if i == 0 else word.capitalize(),
-        ),
+        # "lowcram": (
+        #     True,
+        #     lambda i, word, _: "@" + word if i == 0 else word.capitalize(),
+        # ),
         "(criff | criffed)": (True, lambda i, word, _: word.capitalize()),
         "tridal": (False, lambda i, word, _: word.capitalize()),
         "snake": (True, lambda i, word, _: word if i == 0 else "_" + word),
-        "dotsnik": (True, lambda i, word, _: "." + word if i == 0 else "_" + word),
+        # "dotsnik": (True, lambda i, word, _: "." + word if i == 0 else "_" + word),
         "dot": (True, lambda i, word, _: "." + word if i == 0 else "_" + word),
         "smash": (True, lambda i, word, _: word),
         "(spine | kebab)": (True, lambda i, word, _: word if i == 0 else "-" + word),
@@ -115,11 +115,11 @@ ctx = Context("formatters")
 
 ctx.keymap(
     {
-        "(phrase | say) <dgndictation> [over]": text,
-        "sentence <dgndictation> [over]": sentence_text,
-        "(comma | ,) <dgndictation> [over]": [", ", spoken_text],
-        "period <dgndictation> [over]": [". ", sentence_text],
-        "word <dgnwords>": word,
+        "(phrase | say) <dgndictation>++ [over]": text,
+        "sentence <dgndictation>++ [over]": sentence_text,
+        # "(comma | ,) <dgndictation> [over]": [", ", spoken_text],
+        # "period <dgndictation> [over]": [". ", sentence_text],
+        # "word <dgnwords>": word,
         "(%s)+ [<dgndictation>] [over]" % (" | ".join(formatters)): FormatText,
         # to match surrounder command + another command (i.e. not dgndictation)
         "(%s)+" % (" | ".join(surrounders)): FormatText,

@@ -1,3 +1,5 @@
+# used for switching apps including apps/chrome.py
+
 from talon.voice import Context
 from talon import ui
 import time
@@ -46,7 +48,7 @@ ctx.keymap(
         "(focus | fox) {switcher.running}": switch_app,
         "launch {switcher.launch}": launch_app,
         # custom switchers here
-        "madam": lambda x: switch_app(x, "Atom"),
+        # "madam": lambda x: switch_app(x, "Atom"),
         "system preferences": lambda x: switch_app(x, "System Preferences"),
     }
 )
