@@ -60,6 +60,11 @@ context.keymap(
         + optional_numerals
         + "until"
         + optional_numerals: select_lines_function,
+        'bracken': Key('cmd-shift-ctrl-right'),
+        'get next': Key('cmd-d'),
+        'skip next': Key('cmd-k cmd-d'),
+        'select line': Key('cmd-l'),
+        'copy line': Key('cmd-l cmd-c'),
         # Finding text
         "find": Key("cmd-f"),
         "find next <dgndictation>": jump_to_next_word_instance,
@@ -67,10 +72,22 @@ context.keymap(
         "clone": Key("alt-shift-down"),
         # Navigation
         "line" + optional_numerals: jump_to_line,
-        "Go to line": Key("cmd-g"),
+        # "Go to line": Key("cmd-g"),
         "line up" + optional_numerals: repeat_function(2, "alt-up"),
         "line down" + optional_numerals: repeat_function(2, "alt-down"),
         'zin mode': Key('cmd-k z'),
+        'go file': Key('cmd-p'),
+        'go line': Key('ctrl-g'),
+        'jumpy': Key('ctrl+-'),
+        'jumper': Key('ctrl-shift+-'),
+        'show side': Key('cmd-b'),
+        'terminal': Key('ctrl-`'),
+        'close others': Key('alt-cmd-t'),
+        'keep open': [Key('cmd-k'), Key('enter')],
+        'add window': Key('shift-cmd-n'),
+        'switcher': Key('ctrl-w'),
+        'celsa': Key('ctrl-alt-cmd-e'),
+        'celk': Key('ctrl-alt-cmd-r'),
         # Navigating Interface
         "explore tab": Key("shift-cmd-e"),
         "search tab": Key("shift-cmd-f"),
@@ -91,10 +108,20 @@ context.keymap(
         "save": Key("cmd+s"),
         "open": Key("cmd+o"),
         # editing
-        "bracken": [Key("cmd-shift-ctrl-right")],
+        'comment block': ['/**', Key('enter')],
+        'autoformat': Key('shift-alt-f'),
+        'comment': Key('cmd-/'),
+        'import class': Key('alt-enter enter'),
+        'destroyer': Key('cmd-l delete delete'),
         # various
-        "comment": Key("cmd-/"),
-        "search all": Key("cmd-shift-f"),
-        "(drop-down | drop)": Key("ctrl-space"),
-    }
-)
+        "(search all | marcall)": Key("cmd-shift-f"),
+        # "(drop-down | drop)": Key("ctrl-space"),
+        #debug
+        'debug': Key('shift-cmd-d'),
+        '(start bug | runnit)': Key('f5'),
+        'stop bug': Key('shift-f5'),
+        'stepper': Key('f10'),
+        'steppin': Key('f11'),
+        'stepout': Key('shift-f11'),
+        'bapoint': Key('f9'),
+})
